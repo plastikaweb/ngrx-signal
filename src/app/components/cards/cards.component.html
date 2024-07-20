@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>Card Name</th>
+    <th>Card Type</th>
+  </tr>
+  @for (card of store.cards(); track $index) {
+    <tr>
+      <td>{{ card.name }}</td>
+      <td>{{ card.type }}</td>
+    </tr>
+    }
+  </table>
+
+current page => {{ page() }}
+
+<button (click)="nextPage()">Next page</button>
+
+  <pre><code>
+    Quantity: {{ store.cards().length }}
+  </code></pre>
